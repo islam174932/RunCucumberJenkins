@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Cucumber Suite" verbose="1" parallel="false">
+    <test name="Cucumber Test">
+        <classes>
+            <class name="Runner.RunCucumberTest"/>
+        </classes>
+    </test>
+</suite>

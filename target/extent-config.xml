@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extentreports>
+    <configuration>
+        <reportname>My Project Report</reportname>
+        <reportheadline>Test Execution Report</reportheadline>
+        <theme>standard</theme>
+        <encoding>utf-8</encoding>
+        <protocol>https</protocol>
+        <offlineMode>false</offlineMode>
+        <documentTitle>Test Report</documentTitle>
+    </configuration>
+</extentreports>
