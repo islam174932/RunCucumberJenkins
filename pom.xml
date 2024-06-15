@@ -12,7 +12,6 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <surefire.plugin.version>3.0.0-M5</surefire.plugin.version>
     </properties>
 
     <dependencies>
@@ -24,23 +23,23 @@
             <scope>test</scope>
         </dependency>
 
-             <dependency>
-    <groupId>com.browserstack</groupId>
-    <artifactId>browserstack-java-sdk</artifactId>
-    <version>1.7.1</version> <!-- Replace with the correct version -->
-</dependency>
+        <!-- Extent Reports -->
         <dependency>
             <groupId>tech.grasshopper</groupId>
             <artifactId>extentreports-cucumber7-adapter</artifactId>
             <version>1.14.0</version>
             <scope>test</scope>
         </dependency>
+
+        <!-- Cucumber JVM Dependencies -->
         <dependency>
             <groupId>info.cukes</groupId>
             <artifactId>cucumber-jvm-deps</artifactId>
             <version>1.0.5</version>
             <scope>provided</scope>
         </dependency>
+
+        <!-- Cucumber Picocontainer -->
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-picocontainer</artifactId>
@@ -48,7 +47,7 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- Logging -->
+        <!-- Logging - SLF4J Simple Binding -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
@@ -79,37 +78,28 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- Appium Java client -->
+        <!-- Appium Java Client -->
         <dependency>
             <groupId>io.appium</groupId>
             <artifactId>java-client</artifactId>
             <version>7.5.1</version>
             <scope>test</scope>
         </dependency>
-
-        <!-- BrowserStack Java SDK -->
-        <dependency>
-            <groupId>com.browserstack</groupId>
-            <artifactId>browserstack-java-sdk</artifactId>
-            <version>1.0.0</version> <!-- Replace with actual version -->
-        </dependency>
     </dependencies>
 
     <build>
         <plugins>
-            <!-- Maven Surefire Plugin -->
+            <!-- Maven Surefire Plugin for running tests -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M5</version>
                 <configuration>
-                    <parallel>methods</parallel>
-                    <threadCount>4</threadCount>
-                    <argLine>-javaagent:"${com.browserstack:browserstack-java-sdk:jar}"</argLine>
+                    <parallel>methods</parallel> <!-- Run tests in parallel at the method level -->
                 </configuration>
             </plugin>
 
-            <!-- Maven Dependency Plugin -->
+            <!-- Maven Dependency Plugin to get classpath filenames -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
@@ -125,5 +115,5 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
+
