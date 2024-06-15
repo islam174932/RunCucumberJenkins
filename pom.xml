@@ -23,6 +23,12 @@
             <version>7.13.0</version>
             <scope>test</scope>
         </dependency>
+
+             <dependency>
+    <groupId>com.browserstack</groupId>
+    <artifactId>browserstack-java-sdk</artifactId>
+    <version>1.7.1</version> <!-- Replace with the correct version -->
+</dependency>
         <dependency>
             <groupId>tech.grasshopper</groupId>
             <artifactId>extentreports-cucumber7-adapter</artifactId>
