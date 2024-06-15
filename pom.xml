@@ -78,11 +78,7 @@
         </dependency>
 
         <!-- Add this dependency with a different version -->
-   <dependency>
-    <groupId>tech.grasshopper</groupId>
-    <artifactId>extent-cucumber6-adapter</artifactId>
-    <version>2.9.0</version>
-</dependency>
+>
 
     </dependencies>
 </project>
